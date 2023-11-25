@@ -3,7 +3,7 @@ import streamlit as st
 
 import requests
 
-BACKEND_URL = "http://localhost:8000"  # replace with your backend's URL
+BACKEND_URL = "https://langchainpdfchatbot.azurewebsites.net"  # replace with your backend's URL
 
 def main():
     st.title("PDF Chatbot")
