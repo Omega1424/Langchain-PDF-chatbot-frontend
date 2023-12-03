@@ -9,9 +9,9 @@ def main():
     lottie_plane = load_lottiefile('plane.json')
     st.markdown(
         f"""
-        <div style="display: flex; align-items: center;">
-            <h1 style="margin-right: 20px;">ResumeGPT</h1>
-            {st_lottie(lottie_plane, speed=1, reverse=False, loop=True, quality='medium')}
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <h1 style="margin-right: 10px; margin-bottom: 0;">ResumeGPT</h1>
+            {st_lottie(lottie_plane, speed=1, reverse=False, loop=True, quality='medium', height=40, key="lottie_animation")}
         </div>
         """,
         unsafe_allow_html=True
