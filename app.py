@@ -6,7 +6,9 @@ import requests
 BACKEND_URL = "https://langchainpdfchatbot.azurewebsites.net"  # replace with your backend's URL
 
 def main():
-    st.title("ResumeGPT")
+    lottie_plane = load_lottiefile('plane.json')
+    st.title("ResumeGPT") 
+    st_lottie(lottie_plane)
 
     #Initializing chat history
     if "messages" not in st.session_state:
@@ -47,7 +49,6 @@ def send_query_to_backend(query):
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
-lottie_waiting = load_lottiefile('Aniki_Hamster.json')
 if __name__ == "__main__":
     main()
 lottie_waiting = load_lottiefile('Aniki_Hamster.json')
