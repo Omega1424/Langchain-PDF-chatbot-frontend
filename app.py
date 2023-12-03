@@ -7,8 +7,15 @@ BACKEND_URL = "https://langchainpdfchatbot.azurewebsites.net"  # replace with yo
 
 def main():
     lottie_plane = load_lottiefile('plane.json')
-    st.title("ResumeGPT") 
-    st_lottie(lottie_plane)
+    st.markdown(
+        f"""
+        <div style="display: flex; align-items: center;">
+            <h1 style="margin-right: 20px;">ResumeGPT</h1>
+            {st_lottie(lottie_plane, speed=1, reverse=False, loop=True, quality='medium')}
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     #Initializing chat history
     if "messages" not in st.session_state:
@@ -51,27 +58,3 @@ def load_lottiefile(filepath: str):
         return json.load(f)
 if __name__ == "__main__":
     main()
-lottie_waiting = load_lottiefile('Aniki_Hamster.json')
-
-st.markdown(
-f"""
-<style>
-    .lottie-container {{
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 999;
-    }}
-</style>
-<div class="lottie-container">
-    {st_lottie(lottie_waiting,
-    speed=1,
-    reverse=False,
-    loop=True,
-    quality='medium',
-    height=200,
-    key="lottie_animation")}
-</div>
-""",
-unsafe_allow_html=True
-)
