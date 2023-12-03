@@ -57,7 +57,7 @@ st_lottie(
     reverse=False,
     loop=True,
     quality='medium',
-    height=20
+    height=20,
     key="lottie_animation"
 )
 st.markdown(
