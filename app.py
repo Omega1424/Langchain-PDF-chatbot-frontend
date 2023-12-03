@@ -68,7 +68,7 @@ f"""
     reverse=False,
     loop=True,
     quality='medium',
-    height=20,
+    height=200,
     key="lottie_animation")}
 </div>
 """,
