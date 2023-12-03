@@ -37,7 +37,7 @@ def main():
                 st.write(f'Error: {response.text}')
         st.session_state.messages.append({"role": "assistant", "content": response.json().get("Answer")})
     else:
-        st.write("Ask me something about my resume!.")
+        st.write("Ask me something about my resume!")
 
 def send_query_to_backend(query):
     # Send a POST request with a JSON payload
