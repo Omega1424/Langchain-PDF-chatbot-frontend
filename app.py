@@ -19,7 +19,7 @@ def main():
 
 
     # Take user input
-    query = st.chat_input("Ask a question about the resume:")
+    query = st.chat_input("Enter question here:")
 
     # When 'Get Answer' button is clicked
 
@@ -37,7 +37,7 @@ def main():
                 st.write(f'Error: {response.text}')
         st.session_state.messages.append({"role": "assistant", "content": response.json().get("Answer")})
     else:
-        st.write("Please enter a question.")
+        st.write("Ask me something about my resume!.")
 
 def send_query_to_backend(query):
     # Send a POST request with a JSON payload
