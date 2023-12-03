@@ -50,10 +50,28 @@ def load_lottiefile(filepath: str):
 lottie_waiting = load_lottiefile('Aniki_Hamster.json')
 if __name__ == "__main__":
     main()
-    st_lottie(
-        lottie_waiting,
-        speed=1,
-        reverse=False,
-        loop=True,
-        quality='medium'
-    )
+lottie_waiting = load_lottiefile('Aniki_Hamster.json')
+st_lottie(
+    lottie_waiting,
+    speed=1,
+    reverse=False,
+    loop=True,
+    quality='medium',
+    height=20
+    key="lottie_animation"
+)
+st.markdown(
+f"""
+<style>
+    .lottie-container {{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+    }}
+</style>
+<div class="lottie-container">
+    {st_lottie(lottie_waiting, speed=1, reverse=False, loop=True, quality='medium', key="lottie_animation")}
+</div>
+""",
+unsafe_allow_html=True
