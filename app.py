@@ -11,7 +11,7 @@ def main():
         f"""
         <div style="display: flex; align-items: center; margin-bottom: 20px;">
             <h1 style="margin-right: 10px; margin-bottom: 0;">ResumeGPT</h1>
-            {st_lottie(lottie_plane, speed=1, reverse=False, loop=True, quality='medium', height=40, key="lottie_animation")}
+            {st_lottie(lottie_plane, speed=1, reverse=False, loop=True, quality='medium', height=100, key="lottie_animation")}
         </div>
         """,
         unsafe_allow_html=True
