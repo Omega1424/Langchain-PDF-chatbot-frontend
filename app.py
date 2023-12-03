@@ -52,7 +52,7 @@ if __name__ == "__main__":
     main()
     st_lottie(
         lottie_waiting,
-        speed=1
+        speed=1,
         reverse=False,
         loop=True,
         quality='medium'
