@@ -1,6 +1,6 @@
 import streamlit as st
-
-
+import json
+from streamlit_lottie import st_lottie 
 import requests
 
 BACKEND_URL = "https://langchainpdfchatbot.azurewebsites.net"  # replace with your backend's URL
@@ -44,6 +44,16 @@ def send_query_to_backend(query):
     response = requests.post(f"{BACKEND_URL}/ask", json={"query": query})
     return response
 
-
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+lottie_waiting = load_lottiefile('Aniki_Hamster.json')
 if __name__ == "__main__":
     main()
+    st_lottie(
+        lottie_waiting,
+        speed=1
+        reverse=False,
+        loop=True,
+        quality='medium'
+    )
