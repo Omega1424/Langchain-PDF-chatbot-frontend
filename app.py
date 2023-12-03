@@ -6,7 +6,7 @@ import requests
 BACKEND_URL = "https://langchainpdfchatbot.azurewebsites.net"  # replace with your backend's URL
 
 def main():
-    st.title("PDF Chatbot")
+    st.title("ResumeGPT")
 
     #Initializing chat history
     if "messages" not in st.session_state:
@@ -19,7 +19,7 @@ def main():
 
 
     # Take user input
-    query = st.chat_input("Ask a question about your document:")
+    query = st.chat_input("Ask a question about the resume:")
 
     # When 'Get Answer' button is clicked
 
