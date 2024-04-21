@@ -1,0 +1,16 @@
+name: Keep Azure Function App Warm
+
+on:
+  schedule:
+    # Runs every 5 minutes
+    - cron: '*/5 * * * *'
+
+jobs:
+  ping-api:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Ping API /api/health endpoint
+      run: |
+        curl -sSf https://factorem-jotform-integration.azurewebsites.net/api/health
+    - run: echo "🍏 This job's status is ${{ job.status }}."
